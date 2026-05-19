@@ -1,0 +1,31 @@
+{
+  "name": "user/smart-trolley-sad",
+  "description": "Laravel 11 partial project files for Smart Trolley SAD.",
+  "require": {
+    "php": "^8.1",
+    "laravel/framework": "^11.0",
+    "openai-php/laravel": "^0.17.1",
+    "laravel/tinker": "^2.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Google\\Cloud\\AIPlatform\\": "vendor/google/generative-ai/src/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  },
+  "require-dev": {
+    "nunomaduro/collision": "^8.8",
+    "spatie/laravel-ignition": "^2.9",
+    "laravel/sail": "^1.46"
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "@php artisan package:discover --ansi"
+    ]
+  }
+}
